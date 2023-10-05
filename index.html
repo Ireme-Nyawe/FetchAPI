@@ -6,7 +6,7 @@
     </head>
     <body> 
     <div class="all">
-        <button id="reqBtn" onclick="request()">G Data</button>
+        <button id="reqBtn" onclick="request()">GET Data</button>
         
         <div id="result"></div>
     </body>
@@ -22,6 +22,7 @@
                 var result = document.getElementById('result')
                 console.log(response)
                 let html
+                // let element=[];
                 response.forEach(element => {
 
                     // response.forEach(returnVal(element){
@@ -33,7 +34,6 @@
                     html+=`
                     <div class="container">
                        <p style="color: black; text-align: center;"> </p>
-                       <p > <b class="fdname">User Id:</b> ${element.userId}</p>
                        <p > <b class="fdname">Id:</b> ${element.id}</p>
                        <p > <b class="fdname">Title:</b> ${element.title}</p>
                        <p > <b class="fdname">Completed:</b> ${element.completed}</p>
@@ -71,7 +71,7 @@
             margin-left: 25%;
         }
         .fdname{
-            margin-right: 10%;
+            width: 30px;
         }
         
 
